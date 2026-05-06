@@ -1,26 +1,16 @@
-const express = require("express");
-const cors = require("cors");
-
-const app = express();
-app.use(cors());
-app.use(express.json());
-
-const PORT = process.env.PORT || 3000;
-
-// TEST ROUTE
-app.get("/", (req, res) => {
-  res.send("Exalt Exchange Backend Running");
-});
-
-// STATUS API
-app.get("/status", (req, res) => {
-  res.json({
-    ok: true,
-    status: "running",
-    exchange: "Exalt Exchange",
-  });
-});
-
-app.listen(PORT, () => {
-  console.log("Server running on port " + PORT);
-});
+{
+  "name": "exalt-real-backend",
+  "version": "1.0.0",
+  "description": "Exalt Backend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": "18.x"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
+  }
+}
